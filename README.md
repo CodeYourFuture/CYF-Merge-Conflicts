@@ -1,21 +1,53 @@
-# COURSEWORK NAME
-
-Replace this readme with the requirements for your coursework
+# Managing Merge Conflicts
 
 ## Learning Objectives
-- [ ] Use the [Teach Tech Together](https://teachtogether.tech/en/index.html#s:process-objectives) guide to construct your objectives
-- [ ] Limit the objectives to 3-5 items
-- [ ] Write objectives you can measure
+- [ ] Commit different changes to the same line
+- [ ] Resolve the merge conflicts that occur
+- [ ] Feature branch from main on a shared repo
 
 ## Requirements
 
-Explain the requirements of the coursework. You might want to talk about goals here. 
-You might want to use formal specifications like Given/When/Then. It's ok for requirements to be in different formats.
-We want trainees to learn to interpret requirements in many settings and expressions.
+### 1. Create and resolve merge conflicts
+
+### 2. Reduce merge conflicts with feature branching
+
+
+```mermaid
+gitGraph
+    commit
+    branch feature-buttons
+    checkout feature-buttons
+    commit
+    commit
+    checkout main
+    branch feature-footer
+    checkout feature-footer
+    commit
+    checkout main
+    branch feature-logo
+    checkout feature-logo
+    commit
+    commit
+    checkout main
+    merge feature-buttons
+    merge feature-logo
+    branch feature-header
+    checkout feature-header
+    commit
+    commit
+    checkout main
+    merge feature-header
+    checkout feature-footer
+    commit
+    commit
+    commit
+    checkout main
+    merge feature-footer
+```
 
 ## Acceptance Criteria
 
-- [ ] I have provided clear success criteria
-- [ ] These might be related to the objectives and the requirements
-- [ ] I have given some simple, clear ways for trainees to evaluate their work
-- [ ] I have run Lighthouse and my Accessibility score is 100
+- [ ] I have created a merge conflict
+- [ ] I have resolved this conflict
+- [ ] I have created a small scoped feature branch on a shared repo
+- [ ] I have merged this feature branch to main
